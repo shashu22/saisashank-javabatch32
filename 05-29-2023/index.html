@@ -1,4 +1,36 @@
+<!DOCTYPE html>
 <html>
-    <head></head>
-    <body></body>
+    <head>
+        <title>JavaScript</title>
+    </head>
+    <body>
+        <h4>JavaScript Training</h4>
+        <hr/>
+        <h1><b>Personal Profile</b></h1>
+        <img id="image" src="Passport Size Photo.jpg" style="border-radius: 50%; height: 200px" alt="Passport Size Photo" />
+        <table>
+            <tr>
+                <td><b>Latest Hobby</b></td>
+                <td id="hobby"></td>
+            </tr>
+        </table>
+        <script>
+            let profile = {
+                firstName: "Sai Sashank",
+                lastName: "Challa",
+                image: document.getElementById("image"),
+                birthDay: "08/18",
+                educationLevel: "Master's",
+                school: "UCM",
+                hobbies: ["Cricket", "Badminton", "Football", "TV Shows"],
+                city: "Kansas City",
+                state: "Kansas",
+                gender: "Male"
+            }
+
+            console.log(profile.hobbies[profile.hobbies.length-1]);
+            console.log(document.getElementById("image"));
+            document.getElementById("hobby").innerHTML = profile.hobbies[profile.hobbies.length-1]
+        </script>
+    </body>
 </html>
