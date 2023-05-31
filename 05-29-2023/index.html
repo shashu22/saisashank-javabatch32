@@ -7,13 +7,7 @@
         <h4>JavaScript Training</h4>
         <hr/>
         <h1><b>Personal Profile</b></h1>
-        <img id="image" src="Passport Size Photo.jpg" style="border-radius: 50%; height: 200px" alt="Passport Size Photo" />
-        <table>
-            <tr>
-                <td><b>Latest Hobby</b></td>
-                <td id="hobby"></td>
-            </tr>
-        </table>
+        <img id="image" src="Passport Size Photo.jpg" style="border-radius: 50%; height: 200px; width: 250px;" alt="Passport Size Photo" />
         <script>
             let profile = {
                 firstName: "Sai Sashank",
@@ -29,8 +23,6 @@
             }
 
             console.log(profile.hobbies[profile.hobbies.length-1]);
-            console.log(document.getElementById("image"));
-            document.getElementById("hobby").innerHTML = profile.hobbies[profile.hobbies.length-1]
         </script>
     </body>
 </html>
