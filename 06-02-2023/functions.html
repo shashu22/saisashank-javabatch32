@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS Functions</title>
+    </head>
+    <body>
+        <h1>JavaScript Functions</h1>
+
+        <script>
+            let hobbies = [
+                {
+                    name: "cricket",
+                    type: "sport"
+                },
+                {
+                    name: "badminton",
+                    type: "sport"
+                },
+                {
+                    name: "football",
+                    type: "sport"
+                },
+                {
+                    name: "chess",
+                    type: "indoor"
+                }
+            ]
+
+            let hobbiesFunciton = () => hobbies;
+
+            let newHobby = {
+                name: "carroms",
+                type: "indoor"
+            }
+            let addHobby = hob => {
+                hobbies.push(hob);
+                return hobbies;
+            }
+            
+            let hobby = "football"
+            let removeHobby = function(hobby) {
+                let hobbyIndex = hobbies.findIndex(ele => ele.name === hobby)
+                hobbies.splice(hobbyIndex, 1);
+                return hobbies;
+            }
+            console.log(hobbiesFunciton());
+            // console.log(addHobby(newHobby));
+            // console.log(removeHobby(hobby));
+
+        </script>
+    </body>
+</html>
