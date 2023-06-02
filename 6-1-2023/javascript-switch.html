@@ -7,35 +7,38 @@
         <h1>JavaScript Switch</h1>
 
         <script>
-            let environment = "dev", amount = 100;
+            let environment = "prod";
             switch(environment) {
                 case "dev": {
-                    amount += amount * 10 / 100;
+                    amount = 100;
+                    amount = amount + (amount * 10 / 100);
+                    console.log(environment + " - " + amount);
                 }
                 break;
                 case "test": {
-                    amount += amount * 20 / 100;
+                    amount = 100;
+                    amount = amount + (amount * 20 / 100);
+                    console.log(environment + " - " + amount);
                 }
                 break;
                 case "stage": {
-                    amount += amount * 30 / 100;
+                    amount = 100;
+                    amount = amount + (amount * 30 / 100);
+                    console.log(environment + " - " + amount);
                 }
                 break;
                 case "prod": {
-                    amount += amount * 5 / 100;
+                    amount = 100;
+                    amount = amount + (amount * 5 / 100);
+                    console.log(environment + " - " + amount);
                 }
                 break;
                 default: {
+                    amount = 100;
                     amount = amount;
+                    console.log(environment + " - " + amount);
                 }
             }
-            console.log(environment + " - " + amount);
-            environment = "test";
-            console.log(environment + " - " + amount);
-            environment = "stage";
-            console.log(environment + " - " + amount);
-            environment = "prod";
-            console.log(environment + " - " + amount);
         </script>
     </body>
 </html>
