@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Functions Replay</title>
+    </head>
+    <body>
+        <h1>JS Functions Replay</h1>
+        <script>
+            let hobbies = ["pubg", "clash of clans", "clash royale", "mini militia"];
+            
+            let printHobbies = function() {
+                return hobbies;
+            }
+
+            let addHobby = function(newHobby) {
+                hobbies.push(newHobby);
+                return hobbies;
+            }
+
+            let deleteHobby = function(hobby) {
+                hobbies.splice(hobbies.findIndex(ele => ele === hobby), 1);
+                return hobbies;
+            }
+
+            // console.log(printHobbies());
+            // console.log(addHobby("instagram"));
+            console.log(deleteHobby("clash of clans"));
+        </script>
+    </body>
+</html>
