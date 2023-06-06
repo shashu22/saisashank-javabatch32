@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML-JS Forms</title>
+    </head>
+    <body>
+        <h1>Profile</h1>
+
+        <table>
+            <tr>
+                <td><b>First Name</b></td>
+                <td id="FirstName"><input type="text" id="fName" placeholder="First Name" /></td>
+            </tr>
+            <tr>
+                <td><b>Last Name</b></td>
+                <td id="LastName"><input type="text" id="lName" placeholder="Last Name" /></td>
+            </tr>
+            <tr>
+                <td><b>Date of Birth</b></td>
+                <td id="DoB"><input type="date" id="dob" /></td>
+            </tr>
+            <tr>
+                <td><b>email</b></td>
+                <td id="Email"><input type="text" id="email" placeholder="email" /></td>
+            </tr>
+            <tr>
+                <td><b>Phone</b></td>
+                <td id="Phone"><input type="number" id="phone" placeholder="Phone" /></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button type="submit" onclick="submit();">Submit</button></td>
+            </tr>
+        </table>
+
+        <script>
+            
+            let submit = function() {
+                const fName = document.getElementById("fName").value;
+                const lName = document.getElementById("lName").value;
+                const dob = document.getElementById("dob").value;
+                const email = document.getElementById("email").value;
+                const phone = document.getElementById("phone").value;
+                document.getElementById("FirstName").innerHTML = fName;
+                document.getElementById("LastName").innerHTML = lName;
+                document.getElementById("DoB").innerHTML = dob;
+                document.getElementById("Email").innerHTML = email;
+                document.getElementById("Phone").innerHTML = phone;
+            }
+
+        </script>
+    </body>
+</html>
