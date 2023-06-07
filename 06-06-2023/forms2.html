@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Profile Forms</title>
+    </head>
+    <body>
+        <h1>Personal Profile</h1>
+
+        <table>
+            <tr>
+                <td><b>First Name</b></td>
+                <td><input type="text" name="firstName" placeholder="First Name" id="fName" /></td>
+            </tr>
+            <tr>
+                <td><b>Last Name</b></td>
+                <td><input type="text" name="lastName" placeholder="Last Name" id="lName" /></td>
+            </tr>
+            <tr>
+                <td><b>E-mail</b></td>
+                <td><input type="email" name="email" placeholder="email" id="email" /></td>
+            </tr>
+            <tr>
+                <td><b>Phone Number</b></td>
+                <td><input type="number" name="phone" placeholder="Phone Number" id="phone" /></td>
+            </tr>
+            <tr>
+                <td><b>Date of Birth</b></td>
+                <td><input type="date" id="dob" name="dateOfBirth" /></td>
+            </tr>
+            <tr>
+                <td><b>Gender</b></td>
+                <td>
+                    <input type="radio" name="gender" value="Male" />Male
+                    <input type="radio" name="gender" value="Female" />Female
+                </td>
+            </tr>
+            <tr>
+                <td><b>Hobbies</b></td>
+                <td>
+                    <input type="checkbox" value="PUBG" name="hobby" />PUBG<br>
+                    <input type="checkbox" value="Cricket" name="hobby" />Cricket<br>
+                    <input type="checkbox" value="Instagram" name="hobby" />Instagram
+                </td>
+            </tr>
+            <tr>
+                <td><button type="submit" onclick="submitDetails();" >Submit</button></td>
+            </tr>
+        </table>
+
+        <br><hr><br>
+
+        <div id="output"></div>
+
+        <script>
+            function submitDetails() {
+                const fName = document.getElementById("fName").value;
+                const lName = document.getElementById("lName").value;
+                const email = document.getElementById("email").value;
+                const phone = document.getElementById("phone").value;
+                const dob = document.getElementById("dob").value;
+                let gender = document.getElementsByName("gender");
+                let selectedGender;
+                gender.forEach(ele => {
+                    if(ele.checked) selectedGender = ele.value;
+                })
+
+                let hobbies = document.getElementsByName("hobby");
+                let selectedHobbies = "";
+                hobbies.forEach(ele => {
+                    if(ele.checked) {
+                        selectedHobbies = selectedHobbies + ele.value + "<br>"
+                    }
+                })
+
+                document.getElementById("output").innerHTML = "<h1>Profile Confirmation</h1>"
+                                                            + "<table><tr><td><b>First Name:</b></td><td>" + fName + "</td></tr>"
+                                                            + "<tr><td><b>Last Name:</b></td><td>" + lName + "</td></tr>"
+                                                            + "<tr><td><b>E-mail:</b></td><td>" + email + "</td></tr>"
+                                                            + "<tr><td><b>Phone Number:</b></td><td>" + phone + "</td></tr>"
+                                                            + "<tr><td><b>Date of Birth:</b></td><td>" + dob + "</td></tr>"
+                                                            + "<tr><td><b>Gender:</b></td><td>" + selectedGender + "</td></tr>"
+                                                            + "<tr><td><b>Hobbies:</b></td><td>" + selectedHobbies + "</td></tr></table>"
+            }
+        </script>
+    </body>
+</html>
